@@ -2,14 +2,76 @@
 
 #include <stdio.h>
 
+
+        /* 
+        OPTEI EM ADICIONAR O NÍVEL MESTRE APENAS PARA TESTE DE MOVIMENTOS SEM DESFAZER O QUE JA FOI FEITO NO NÍVEL AMADOR.
+        ABAIXO ESTÁ A TAREFA PARA CONCLUIR O NÍVEL MESTRE. 
+        */
+        
+        // BISPO
+        void moverBispo(int casas){
+             if (casas > 0) {
+            printf("Diagonal direita pra cima...\n");
+            moverBispo(casas - 1);
+            }
+        }
+
+        // TORRE
+        void moverTorre(int casas){
+             if (casas > 0) {
+            printf("Direita...\n");
+            moverTorre(casas - 1);
+            }
+        }
+
+        // RAINHA
+        void moverRainha(int casas){
+             if (casas > 0) {
+            printf("Esquerda...\n");
+            moverRainha(casas - 1);
+            }
+        }
+
+        // CAVALO
+        void moverCavalo(int casas){
+             if (casas > 0) {
+            printf("Pra frente...\n");
+            printf("Pra frente...\n");
+            printf("Direita...\n");
+            moverCavalo(casas - 1);
+            }
+        }
+
+
+
     int main() {
         /*
-        NIVEL AMADOR:
         APENAS SIMULANDO OS MOVIMENTOS DE TORRE / BISPO / RAINHA / CAVALO
         (Aguarde melhorias nas proximas atualizações)
         */ 
-        printf("                     ##### ATENÇÃO JOGADOR ##### \n");
+        printf("                     ##### ATENÇÃO JOGADOR / USUÁRIO ##### \n");
         printf("--- ESTE É APENAS UM PROJETO DE SIMULAÇÃO DE MOVIMENTOS DAS PEÇAS ---\n\n");
+
+        /* 
+        RESSALTO PARA QUE FOSSE ATENDENDIDO A TAREFA DO DESAFIO NÍVEL MESTRE SEM APAGAR OU MODIFICAR A TAREFA DO NÍVEL NOVATO E AMADOR,
+        OPTEI EM INICIAR EM O CÓDIGO COM TESTE DE MOVIMENTO DO NÍVEL MESTRE.
+        */
+
+        // NÍVEL MESTRE
+        printf("Testando movimentos...\n\n");
+        printf("Bispo:\n");
+        moverBispo(5);
+
+        printf("\nTorre:\n");
+        moverTorre(5);
+
+        printf("\nRainha:\n");
+        moverRainha(8);
+
+        printf("\nCavalo:\n");
+        moverCavalo(1);
+
+        printf("\n\n");
         // TORRE COM WHILE
         int direcaoTorre;
         int i = 1;
@@ -148,9 +210,8 @@
         break;
         }
         printf("\n\n\n");
-        
-        
-        
+
+
         
 
 
